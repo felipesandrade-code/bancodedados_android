@@ -19,8 +19,8 @@ interface ContatoDao {
     @Delete
     fun excluir(contato: Contato): Int
 
-    @Query("SELECT * FROM tbl_contato WHERE id = :id")
-    fun buscarContatoPeloId(id: Int): Contato
+    @Query("SELECT * FROM tbl_contato WHERE id = :idContato")
+    fun buscarContatoPeloId(idContato: Long): Contato
 
     @Query("SELECT * FROM tbl_contato ORDER BY nome ASC")
     fun listarContatos(): List<Contato>
